@@ -1,0 +1,36 @@
+{
+  "total_examples": 31723,
+  "train_examples": 27377,
+  "val_examples": 2170,
+  "test_examples": 2176,
+  "num_labels": 8,
+  "labels": [
+    "joy",
+    "sadness",
+    "anger",
+    "fear",
+    "love",
+    "surprise",
+    "neutral",
+    "disgust"
+  ],
+  "class_distribution": {
+    "joy": 3192,
+    "sadness": 657,
+    "anger": 1252,
+    "fear": 149,
+    "love": 723,
+    "surprise": 728,
+    "neutral": 20530,
+    "disgust": 146
+  },
+  "categories_covered": [
+    "Edge Cases (emojis, keyboard smash, punctuation)",
+    "Subtle/Tricky expressions",
+    "Mixed emotions",
+    "Sarcasm/Irony",
+    "Neutral/Ambiguous",
+    "Negation-augmented",
+    "Real-world data (GoEmotions)"
+  ]
+}

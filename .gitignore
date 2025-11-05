@@ -1,0 +1,329 @@
+# ============================================================================
+# Self-Healing Emotion Classifier - .gitignore
+# Excludes large files, models, data, and environment files
+# ============================================================================
+
+# ============================================================================
+# Python
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+
+# ============================================================================
+# Machine Learning / Data Science
+# ============================================================================
+
+# ENTIRE MODELS FOLDER - ALL FILES EXCLUDED
+models/
+
+# Datasets - LARGE FILES!
+data/raw/**/*.csv
+data/raw/**/*.json
+data/raw/**/*.jsonl
+data/raw/**/*.parquet
+data/raw/**/*.arrow
+data/processed/emotion_dataset/
+data/processed/emotion_dataset_balanced/
+data/processed/emotion_dataset_ultimate/
+*.arrow
+*.parquet
+
+# Keep only metadata
+!data/processed/label_mapping.json
+!data/processed/dataset_summary.json
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Hugging Face cache - VERY LARGE!
+~/.cache/huggingface/
+.cache/
+cache/
+*.lock
+
+# Transformers cache
+transformers_cache/
+.transformers_cache/
+
+# Datasets cache
+.datasets/
+datasets_cache/
+
+
+# ============================================================================
+# Logs & Output Files
+# ============================================================================
+
+# Log files
+logs/*.log
+logs/*.jsonl
+logs/*.txt
+*.log
+
+# Keep visualization outputs (small PNGs)
+!logs/*.png
+!logs/.gitkeep
+
+# Tensorboard
+runs/
+tb_logs/
+lightning_logs/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+
+
+# ============================================================================
+# IDE & Editor
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+
+# ============================================================================
+# Operating System
+# ============================================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+.Trash-*
+
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Test outputs
+test_output/
+stress_test_results/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# Environment variables
+.env.local
+.env.*.local
+config.local.yaml
+secrets.yaml
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wav
+*.mp3
+
+# Profiling
+*.prof
+*.lprof
+
+
+# ============================================================================
+# Git LFS (if using)
+# ============================================================================
+*.psd
+*.ai
+
+
+# ============================================================================
+# Keep These Files/Folders
+# ============================================================================
+
+# Keep empty directories with .gitkeep
+!**/.gitkeep
+
+# Keep README files
+!README.md
+!**/README.md
+
+# Keep requirements
+!requirements.txt
+!requirements-dev.txt
+
+# Keep configuration
+!config.yaml
+!config.example.yaml
+
+# Keep license
+!LICENSE
+!LICENSE.txt
+
+# Keep GitHub workflows (if any)
+!.github/
+!.github/**
+
+# Keep documentation
+!docs/*.md
+
+# Keep test files (code only, not data)
+!tests/*.py
+
+# Keep source code
+!src/**/*.py
+
+# Keep small visualization outputs
+!logs/*.png

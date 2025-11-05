@@ -1,0 +1,44 @@
+{
+  "train": {
+    "num_samples": 16000,
+    "avg_text_length": 19.1663125,
+    "max_text_length": 66,
+    "min_text_length": 2,
+    "label_distribution": {
+      "0": 4666,
+      "3": 2159,
+      "2": 1304,
+      "5": 572,
+      "4": 1937,
+      "1": 5362
+    }
+  },
+  "validation": {
+    "num_samples": 2000,
+    "avg_text_length": 18.866,
+    "max_text_length": 61,
+    "min_text_length": 2,
+    "label_distribution": {
+      "0": 550,
+      "2": 178,
+      "3": 275,
+      "1": 704,
+      "4": 212,
+      "5": 81
+    }
+  },
+  "test": {
+    "num_samples": 2000,
+    "avg_text_length": 19.154,
+    "max_text_length": 61,
+    "min_text_length": 3,
+    "label_distribution": {
+      "0": 581,
+      "1": 695,
+      "4": 224,
+      "3": 275,
+      "2": 159,
+      "5": 66
+    }
+  }
+}

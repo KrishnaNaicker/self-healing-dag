@@ -1,0 +1,53 @@
+# Model Configuration
+model:
+  name: "distilbert-base-uncased"
+  num_labels: 8  # Will be updated based on dataset
+  max_length: 128
+  
+# LoRA Configuration
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+  target_modules: ["q_lin", "v_lin"]
+  bias: "none"
+
+# Training Configuration
+training:
+  output_dir: "models/fine_tuned"
+  num_epochs: 3  # INCREASED from 3 
+  batch_size: 16
+  learning_rate: 1e-4  # REDUCED from 2e-4 (more stable)
+  warmup_steps: 100
+  logging_steps: 50
+  eval_steps: 500  # INCREASED from 100 (evaluate less frequently)
+  save_steps: 500
+  gradient_accumulation_steps: 2
+
+# Dataset Configuration
+dataset:
+  name: "emotion_dataset_balanced"  # We'll use emotion classification
+  text_column: "text"
+  label_column: "label"
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+
+# DAG Configuration
+dag:
+  confidence_threshold: 0.80  # Below this triggers fallback
+  max_retries: 2
+  backup_model: null  # Will be set if implementing bonus
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  log_file: "./logs/predictions.log"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
+
+# Bonus Features
+bonus:
+  enable_backup_model: true
+  enable_visualization: true
+  track_confidence_curves: true
+  show_statistics: true
